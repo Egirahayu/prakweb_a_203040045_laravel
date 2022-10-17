@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +13,22 @@
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/about', function () {
+    return view('about', [
+        "nama" => 'Mohamad Egi Rahayu',
+        "email" => "egirahayu@gmail.com",
+        "image" => "Egi Rahayu.JPG"
+    ]);
+});
+
+Route::get('/blog', function () {
+    return view('posts');
 });
