@@ -8,15 +8,8 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 class PostFactory extends Factory
 {
     /**
-     * The name of the factory's corresponding model.
-     * 
-     * @var string
-     */
-    protected $model = Post::class;
-
-    /**
      * Define the model's default state.
-     * 
+     *
      * @return array
      */
     public function definition()
@@ -26,8 +19,8 @@ class PostFactory extends Factory
             'slug' => $this->faker->slug(),
             'excerpt' => $this->faker->paragraph(),
             'body' => $this->faker->paragraph(mt_rand(5, 10)),
-            'user_id' = mt_rand(1, 3),
-            'category_id' = mt_rand(1, 2)
+            'category_id' => mt_rand(1, 2),
+            'user_id' => mt_rand(1, 3)
         ];
     }
 }
